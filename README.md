@@ -1,6 +1,6 @@
 # ROCm 6.1.3, PyTorch 2.4, Torchvision 0.19 with AMD GFX803 aka AMD Polaris aka AMD RX570/RX580/RX590
 
-This repo provides a docker buildfile based on the original ROCm-Dockerimage to compile PyTorch and Torchvision for the [AMD RX570/RX580/RX590](https://en.wikipedia.org/wiki/Radeon_500_series) generation. PyTorch, Torchvision _and_ rocblas are not compiled to use the GPU-Polaris generation in the original PIP repository. And of course not compiled too in the official ROCm-PyTorch Dockerfile. However, if Polaris 20/21 GPU support is to be used in ComfyUI, there is no way around newly compiled pyTorch and Torvision whl/wheel python files. And in rOCM 6.X you have to recompile rocBLAS-Library too. That what this Docker Buildfile will do for you.
+This repo provides a docker buildfile based on the original ROCm-Dockerimage to compile PyTorch and Torchvision for the [AMD RX570/RX580/RX590](https://en.wikipedia.org/wiki/Radeon_500_series) generation. PyTorch, Torchvision _and_ rocBLAS-Library are not compiled to use the GPU-Polaris generation in the original PIP repository. And of course not compiled too in the official ROCm-PyTorch Dockerfile. However, if Polaris 20/21 GPU support is to be used in ComfyUI, there is no way around newly compiled pyTorch and Torvision whl/wheel python files. And in rOCM 6.X you have to recompile rocBLAS-Library too. That what this Docker Buildfile will do for you.
 
 ## ROCm-6.1.3 in a Dockerfile
 
