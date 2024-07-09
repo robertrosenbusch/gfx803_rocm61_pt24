@@ -1,0 +1,19 @@
+version: "3"
+services: 
+    rocm61_pt24:
+        tty: true
+        stdin_open: true
+        ports:
+            - "2222:22"
+            - "8188:8188"
+        devices:
+            - /dev/kfd
+            - /dev/dri
+        group_add:
+            - video
+#        volumes:
+#            - /media/500gb_hitachi/ComfyUI/custom_nodes:/ComfyUI/custom_nodes
+        environment:
+            - args="--use-pytorch-cross-attention"
+        image: rocm61_pt24:latest
+        command: bash
